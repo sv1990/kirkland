@@ -1,0 +1,12 @@
+liquid.xyz
+1 1 1
+liquid.tiff
+n
+n
+200
+4096 4096
+0 0
+1
+n
+n
+n

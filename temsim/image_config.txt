@@ -1,0 +1,9 @@
+liquid.tiff
+0
+out.tiff
+0 0
+0
+30
+0 0
+0 0
+0 0
