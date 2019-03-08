@@ -39,10 +39,10 @@ def autoslic_config(inputfile, ncell=(1, 1, 1), output_file=None, beam_energy=60
 
 
 def run_autoslic(inputfile, ncell=(1, 1, 1), output_file=None, beam_energy=60, wavefunction_size=(512, 512),
-                 slice_thickness=5):
+                 slice_thickness=5, executable='./build/autoslic'):
     config, output = autoslic_config(inputfile, ncell=ncell, output_file=output_file, beam_energy=beam_energy,
                                      wavefunction_size=wavefunction_size, slice_thickness=slice_thickness)
-    run_with_config('./build/autoslic', config)
+    run_with_config(executable, config)
     return output
 
 
@@ -63,8 +63,8 @@ def image_config(inputfile, outputfile, Cs3=0, Cs5=0, defocus=0, aperture_size=3
     return config_file
 
 def run_image(inputfile, outputfile, Cs3=0, Cs5=0, defocus=0, aperture_size=30, two_fold_astigmatism=(0, 0),
-              three_fold_astigmatism=(0, 0), lens_center=(0, 0)):
+              three_fold_astigmatism=(0, 0), lens_center=(0, 0), executable='./build/image'):
     config = image_config(inputfile, outputfile, Cs3=Cs3, Cs5=Cs5, defocus=defocus, aperture_size=aperture_size,
                           two_fold_astigmatism=two_fold_astigmatism, three_fold_astigmatism=three_fold_astigmatism,
                           lens_center=lens_center)
-    run_with_config('./build/image', config)
+    run_with_config(executable, config)
