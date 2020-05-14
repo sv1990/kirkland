@@ -27,29 +27,29 @@ add_library(floatTIFF STATIC floatTIFF.cpp)
 add_library(kirkland_common STATIC cfpix slicelib floatTIFF)
 
 add_executable(atompot atompot.cpp)
-target_link_libraries(atompot kirkland_common fftw3f_threads fftw3f)
+target_link_libraries(atompot kirkland_common ${FFTW3F_THREADS} ${FFTW3F})
 
 add_executable(autoslic autoslic.cpp autosliccmd.cpp)
-target_link_libraries(autoslic kirkland_common fftw3f_threads fftw3f OpenMP::OpenMP_CXX)
+target_link_libraries(autoslic kirkland_common ${FFTW3F_THREADS} ${FFTW3F} OpenMP::OpenMP_CXX)
 
 add_executable(autostem autostem.cpp autostemcmd.cpp)
-target_link_libraries(autostem kirkland_common fftw3f_threads fftw3f OpenMP::OpenMP_CXX)
+target_link_libraries(autostem kirkland_common ${FFTW3F_THREADS} ${FFTW3F} OpenMP::OpenMP_CXX)
 
 add_executable(image image.cpp)
-target_link_libraries(image kirkland_common fftw3f_threads fftw3f)
+target_link_libraries(image kirkland_common ${FFTW3F_THREADS} ${FFTW3F})
 
 add_executable(incostem incostem.cpp incostemcmd.cpp probe.cpp)
-target_link_libraries(incostem kirkland_common fftw3f_threads fftw3f OpenMP::OpenMP_CXX)
+target_link_libraries(incostem kirkland_common ${FFTW3F_THREADS} ${FFTW3F} OpenMP::OpenMP_CXX)
 
 add_executable(mulslice mulslice.cpp)
-target_link_libraries(mulslice kirkland_common fftw3f_threads fftw3f)
+target_link_libraries(mulslice kirkland_common ${FFTW3F_THREADS} ${FFTW3F})
 
 add_executable(probe probe.cpp probecmd.cpp)
-target_link_libraries(probe kirkland_common fftw3f_threads fftw3f)
+target_link_libraries(probe kirkland_common ${FFTW3F_THREADS} ${FFTW3F})
 
 add_executable(stemslic stemslic.cpp)
-target_link_libraries(stemslic kirkland_common fftw3f_threads fftw3f)
+target_link_libraries(stemslic kirkland_common ${FFTW3F_THREADS} ${FFTW3F})
 
 add_executable(sumpix sumpix.cpp)
-target_link_libraries(sumpix kirkland_common fftw3f_threads fftw3f)
+target_link_libraries(sumpix kirkland_common ${FFTW3F_THREADS} ${FFTW3F})
 

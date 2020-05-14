@@ -12,7 +12,18 @@ endif (FFTW_INCLUDES)
 
 find_path (FFTW_INCLUDES fftw3.h)
 
-find_library (FFTW_LIBRARIES NAMES fftw3)
+find_library (FFTW3F_OMP NAMES fftw3f_omp)
+find_library (FFTW3_MPI NAMES fftw3_mpi)
+find_library (FFTW3F_MPI NAMES fftw3f_mpi)
+find_library (FFTW3L_OMP NAMES fftw3l_omp)
+find_library (FFTW3L NAMES fftw3l)
+find_library (FFTW3F_THREADS NAMES fftw3f_threads)
+find_library (FFTW3_OMP NAMES fftw3_omp)
+find_library (FFTW3_THREADS NAMES fftw3_threads)
+find_library (FFTW3L_THREADS NAMES fftw3l_threads)
+find_library (FFTW3 NAMES fftw3)
+find_library (FFTW3F NAMES fftw3f)
+find_library (FFTW3L_MPI NAMES fftw3l_mpi)
 
 # handle the QUIETLY and REQUIRED arguments and set FFTW_FOUND to TRUE if
 # all listed variables are TRUE
